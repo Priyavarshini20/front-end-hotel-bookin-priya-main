@@ -5,7 +5,7 @@ export const API = "http://localhost:5001/";
 
 const api = axios.create({
   // baseURL: "http://localhost:5001/",
-  baseURL: "http://localhost:5001/",
+  baseURL: "https://hotel-backend-5f4y.onrender.com",
 });
 
 api.interceptors.request.use(
@@ -39,7 +39,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
       try {
         const refreshToken = JSON.parse(localStorage.getItem("refreshToken"));
-        const response = await axios.post(`${API}auth/refresh_token`, {
+        const response = await axios.fetch(`${API}auth/refresh_token`, {
           refreshToken,
         });
         console.log(response);
