@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // export const API = "http://localhost:5001/";
-export const API = "http://localhost:5001/";
+export const API = "https://hotel-backend-5f4y.onrender.com";
 
 const api = axios.create({
   // baseURL: "http://localhost:5001/",
